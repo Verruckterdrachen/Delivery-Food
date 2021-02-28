@@ -1,0 +1,428 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	margin: 55px 0 0 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #595959;
+	background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);*/
+}
+
+button{
+	cursor: pointer;
+	border: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 2px;
+	padding: 8px 16px;
+	transition: .1s linear;
+	background-color: inherit;
+}
+
+input{
+	padding-left: 35px;
+	border: 1px solid #D9D9D9;
+	border-radius: 2px;
+}
+
+button:hover{
+	transform: scale(1.05);
+}
+
+hr{
+	margin-top: 15px;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+h3{
+	font-size: 24px;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	transition: .1s linear;
+}
+
+li:hover{
+	cursor: pointer;
+	color: #000000;
+	transform: scale(1.05);
+}
+
+.container{
+	width: 100%;
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+/*---------------------------------------------------------------------------HEADER*/
+.header, .header_buttons, .restaurants_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header_input{
+	background: url(Icons/address.svg) #ffffff no-repeat 10px center;
+	width: 690px;
+	height: 40px;
+}
+
+.header_buttons {
+	width: 220px;
+}
+
+.header_buttons .user{
+	width: 96px;
+	height: 40px;
+	color: #FFFFFF;
+	background: #1890FF;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header_buttons .basket{
+	width: 113px;
+	height: 40px;
+	background: #FFFFFF;
+	border: 1px solid #D9D9D9;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+}
+
+#blackout {
+   	/* background: rgba(0, 0, 0, 0.4);
+    работает только на видимую часть экрана
+    и это реализуется на js */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+ #blackout:target{display: block;}
+/*---------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------MODAL*/
+.modal {
+	z-index: 100;
+    width: 780px;
+    height: 592px;
+    padding: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #FFFFFF;
+	border-radius: 5px;
+	color: #000000;
+  }
+
+.modal_header, .item, .amount, .modal_footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modal_header h2{
+	font-size: 36px;
+}
+
+.modal_main{
+	margin: 50px 0 50px;
+}
+
+.item{
+	font-size: 18px;
+	margin-bottom: 28px;
+}
+
+.item:before{
+    width: 90%;
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid #D9D9D9;
+    margin-top: 50px;
+}
+
+.amount{
+	width: 230px;
+}
+
+.amount p{
+	color: #40A9FF;
+	padding: 5px 16px;
+	border: 1px solid #40A9FF;
+	border-radius: 2px;
+	transition: .1s linear;
+}
+
+.amount p:hover{
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+.modal_footer div{
+	display: flex;
+}
+
+.modal_footer .total_price{
+	color: #FFFFFF;
+	padding: 20px 30px;
+	font-size: 20px;
+	font-weight: 700;
+	background: #262626;
+	border-radius: 5px;
+}
+
+.modal_footer .checkout{
+	font-size: 16px;
+	color: #FFFFFF;
+	background: #1890FF;
+	margin-right: 20px;
+}
+
+.modal_footer .cancel{
+	font-size: 16px;
+	background: #FFFFFF;
+	border: 1px solid #D9D9D9;
+}
+/*---------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------PROMO*/
+.promo{
+	padding: 50px;
+	color: #302C34;
+	margin-top: 40px;
+	height: 300px;
+	border-radius: 10px;
+	background: url(promo.png) #FFF1B8 right center no-repeat;
+	box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+}
+
+.promo_title{
+	font-size: 39px;
+	padding-bottom: 25px;
+}
+
+.promo_subtitle{
+	font-weight: 400;
+	font-size: 24px;
+}
+/*---------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------RESTAURANTS*/
+.restaurants, .tanuki{
+	margin: 60px 0 144px;
+}
+
+.restaurants_title{
+	font-size: 36px;
+	color: #000000;
+}
+
+.restaurants_input{
+	background: url(Icons/search.svg) #ffffff no-repeat 10px center;
+	width: 306px;
+	height: 34px;
+}
+
+.restaurants_food, .tanuki_food{
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.food_card, .tanuki_card{
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+	border-radius: 7px;
+	transition: .1s linear;
+}
+
+.food_card:hover{
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+.card_info{
+	width: 100%;
+	padding: 25px;
+}
+
+.card_name{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.card_name div{
+	display: flex;
+	align-items: center;
+	padding: 1px 8px;
+	color: #FFFFFF;
+	background: #262626;
+	border-radius: 2px;
+}
+
+.card_subtitle{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 230px;
+}
+
+.star{
+	color: #FFC107;
+	font-weight: 700;
+}
+
+.card_subtitle img, .tanuki_header img{
+	padding-right: 5px;
+}
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------FOOTER*/
+.footer, .navigation, .social_media{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.footer{
+	background: #FFFFFF;
+	height: 100px; 
+	font-size: 18px;
+}
+
+.navigation{
+	width: 580px;
+}
+
+.social_media{
+	width: 120px;
+}
+/*---------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------TANUKI*/
+
+.tanuki_header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 400px;
+	margin-top: 40px;
+}
+
+.tanuki_header h1, .card_buy h3, .card_info h2{
+	color: #000000;
+}
+
+.card_info p{
+	margin: 20px 0;
+}
+
+.card_info h2{
+	font-weight: 400;
+}
+
+.card_buy{
+	width: 220px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.tanuki .basket{
+	width: 124px;
+	color: #FFFFFF;
+	background: #1890FF;
+}
+
+.card_buy h3{
+	font-size: 20px;
+}
+/*---------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------MEDIA*/
+@media (max-width: 1250px)
+{
+	.restaurants, .tanuki{
+		margin: 60px 140px;
+	}
+	.restaurants_food, .tanuki_food{
+		margin: 180px 0;
+		transform: scale(1.2);
+	}
+	.tanuki_header{
+		transform: scale(1.2);
+		width: 100%;
+		height: 120px;
+	}
+}
+
+@media (max-width: 1100px)
+{
+	.modal{
+		top: 10%;
+	}
+
+	.header{
+		flex-direction: column;
+		height: 240px;
+		margin-bottom: 80px;
+	}
+	.header_logo, .header_buttons, .header_input,.restaurants_input{
+		transform: scale(1.7);
+	}
+	.header_input{
+		width: 50%;
+	}
+	.restaurants_header{
+		flex-direction: column;
+		height: 120px;
+	}
+	.restaurants_food, .tanuki_food{
+		justify-content: center;
+		margin: 880px 200px;
+		transform: scale(1.6);
+	}
+}
+/*---------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
