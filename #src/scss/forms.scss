@@ -1,32 +1,95 @@
 //<FORM ()>====================================================================================================
-.form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-	}
+.search-form {
+  &._active{
+    .search-form__item {
+      opacity: 1;
+      top: 100%;
+      visibility: visible;
+      min-height: 48px;
+    }
+    .search-form__icon {
+      color: $primaryColor;
+    }
+  }
+  @media (max-width:600px){
+    display: flex; 
+    justify-content: flex-end;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    background-color: #fff;
+    border-radius: 2px;
+    min-height: 38px;
+    padding: 0px 10px;
+    @media (max-width:600px){
+      box-shadow: 0 0 5px rgba(212, 209, 205, 0.3);
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: -100%;
+      z-index: 5;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease 0s;
+    }
+  }
+  &_small {
+    min-height: 32px;
+  }
+  &__icon {
+    @media (min-width:600px){
+      display: none; 
+    }
+  }
+  &__btn {
+    color: $lightGrayColor;
+  }
+  &__input {
+    font-size: 16px;
+    color: $extraLightGrayColor;
+    line-height: 24 / 16 * 100%;
+    font-family: "SF-Pro";
+    padding: 0px 0px 0px 5px;
+    width: 100%;
+  }
 }
-
 //</FORM>====================================================================================================
 
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&._fw {
-		width: 100%;
-	}
+  align-items: center;
+  justify-content: center;
+	padding: 0px 15px;
+  min-height: 40px;
+  border-radius: 2px;
+  font-family: "SF-Pro";
+  color: $grayColor;
+  border: 1px solid #D9D9D9;
+  transition: background-color 0.3s ease 0s;
+  @media (any-hover: hover){
+    &:hover{
+      background-color: rgb(245, 245, 245);
+    }
+  }
+  &::before{
+    color: $lightGrayColor;
+  }
+	&_primary {
+    color: #fff;
+    background-color: $primaryColor;
+    border: 1px solid $primaryColor;
+    &::before{
+      color: inherit;
+    }
+    @media (any-hover: hover){
+      &:hover{
+        background-color: $primaryColorHover;
+      }
+    }
+  }
 }
 //</BUTTONS>====================================================================================================
 

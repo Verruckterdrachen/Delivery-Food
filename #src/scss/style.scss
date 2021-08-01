@@ -33,6 +33,7 @@ $md4: 479.98;
 
 $mainColor: #000;
 $primaryColor: #1890FF;
+$primaryColorHover: #1782e6;
 
 $extraDarkGrayColor: #262626;
 $darkGrayColor: #302C34;
@@ -46,6 +47,7 @@ $extraLightGrayColor: #BFBFBF;
 @import "null";
 body {
 	color: $mainColor;
+  background: linear-gradient(rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
 	&._lock {
 		overflow: hidden;
 	}
@@ -92,5 +94,13 @@ body {
 	flex: 1 1 auto;
 }
 //===================================================================================================================================
-
+.logo {
+  display: flex;
+  align-items: center;
+  &__name {
+    color: $mainColor;
+    font-size: 15px;
+    margin: 0px 0px 0px 10px;
+  }
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
