@@ -16,3 +16,19 @@
 		display: block;
 	}
 }
+
+._icon-cart:before {
+  content: "\e900";
+}
+._icon-home:before {
+  content: "\e901";
+}
+._icon-search:before {
+  content: "\e902";
+}
+._icon-star:before {
+  content: "\e903";
+}
+._icon-user:before {
+  content: "\e904";
+}
