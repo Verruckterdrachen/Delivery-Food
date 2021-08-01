@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('_head.html',{
-	"title":"Главная"
+	"title":"Home"
 	})
 	<body>
 		<div class="wrapper">
 			@@include('_header.html',{})
 			<main class="page">
+        <section class="section promo">
+          <div class="promo__container _container">
+            <div class="promo__body">
+              <div class="promo__content">
+                <h1 class="promo__title">Онлайн-сервис<br>доставки еды на дом</h1>
+                <div class="promo__text">Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком</div>
+              </div>
+              <div class="promo__image _ibg">
+                <img src="img/promo/promo-bg.png" alt="promo">
+              </div>
+            </div>
+          </div>
+        </section>
 			</main>
 			@@include('_footer.html',{})
 		</div>
