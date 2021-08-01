@@ -1,5 +1,67 @@
-footer {
-}
 //====================================================================================================
-
+.footer {
+  background-color: #fff;
+  padding: 20px 0;
+  &__container {}
+  &__body {
+    display: flex;
+    align-items: center;
+    min-height: 120px;
+    @media (max-width:$md3+px){
+      flex-direction: column; 
+      justify-content: center;
+    }
+  }
+  &__logo {
+    @media (max-width:$md3+px){
+      margin: 0px 0px 20px 0px; 
+    }
+  }
+  &__menu {
+    @media (max-width:$md3+px){
+      margin: 0px 0px 20px 0px; 
+    }
+  }
+}
+.menu {
+  @media (min-width:$md3+px){
+    flex: 1 1 auto;
+    padding: 0px 35px; 
+  }
+  &__body {}
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width:$md3+px){
+      justify-content: center; 
+    }
+  }
+  &__item {
+    padding: 5px 0;
+    @media (min-width:$md3+px){
+      &:not(:last-child) {margin: 0px 10px 0px 0px;} 
+    }
+    @media (max-width:$md3+px){
+      margin: 10px; 
+    }
+  }
+  &__link {
+    color: $grayColor;
+    font-size: 18px;
+    line-height: 21.09 / 18 * 100%;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        color: $mainColor;
+      }
+    }
+  }
+}
+.social {
+  display: flex;
+  align-items: center;
+  &__icon {
+    &:not(:last-child) {margin: 0px 20px 0px 0px;}
+  }
+}
 //====================================================================================================
