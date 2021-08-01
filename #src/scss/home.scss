@@ -44,4 +44,110 @@
     }
   }
 }
+//============================================================================
+.restaurants {
+  @include adaptiv-value("padding-top", 60, 30, 1);
+  @include adaptiv-value("padding-bottom", 90, 45, 1);
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 40px 0px;
+    @media (max-width:600px){
+       flex-direction: column;
+    }
+  }
+  &__title {
+    @media (min-width: 600px){
+      padding: 0px 20px 0px 0px;
+    }
+    @media (max-width:600px){
+      margin: 0px 0px 20px 0px; 
+    }
+  }
+  &__form {
+    @media (min-width: 600px){
+      flex: 0 1 305px;
+    }
+    @media (max-width:600px){
+      min-width: 100%;
+      .search-form__item {
+        min-height: 48px;
+      }
+    }
+  }
+}
+.item-restaurants {
+  &__image {
+    display: block;
+    flex: 0 0 384px;
+    padding: 0px 0px 250/384 * 100% 0px;
+  }
+  &__body {
+    flex: 1 1 auto;
+    padding: 24px 24px 24px 34px;
+    @media (max-width:$md2+px){
+      padding: 18px 18px 18px 28px;
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 20px 0px;
+  }
+  &__title {
+    flex: 1 1 auto;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32 / 24 * 100%;
+    color: $mainColor;
+    padding: 0px 10px 0px 0px;
+  }
+  &__time {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "SF-Pro";
+    color: #fff;
+    font-size: 12px;
+    line-height: 20 / 12 * 100%;
+    min-height: 22px;
+    padding: 0px 10px;
+    border-radius: 2px;
+    background-color: $extraDarkGrayColor;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    color: $lightGrayColor;
+    font-size: 18px;
+    line-height: 32 / 18 * 100%;
+  }
+  &__rate {
+    display: flex;
+    align-items: center;
+    color: #FFC107;
+    font-weight: 700;
+    &::before{
+      margin: 0px 5px 0px 0px;
+    }
+    margin: 0px 25px 0px 0px;
+  }
+  &__price {
+    position: relative;
+    margin: 0px 20px 0px 0px;
+    &::after{
+      content:'';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      top: 50%;
+      right: -12px;
+      background-color: $lightGrayColor;
+      border-radius: 50%;
+      transform: translate(0px,-50%);
+    }
+  }
+}
 //====================================================================================================

@@ -18,6 +18,14 @@
         min-height: 70px; 
       }
     }
+    .actions-header__btn_cart {
+      background-color: #fff;
+      @media (any-hover: hover){
+        &:hover{
+          background-color: rgb(245, 245, 245);
+        }
+      }
+    }
   }
   &__wrapper {
     transition: background-color 0.3s ease 0s;
@@ -72,6 +80,41 @@
     }
     span {
       padding: 0px 0px 0px 5px;
+    }
+  }
+}
+.search-form-header {
+  &._active{
+    .search-form__item {
+      opacity: 1;
+      top: 100%;
+      visibility: visible;
+      min-height: 48px;
+    }
+    .search-form__icon {
+      color: $primaryColor;
+    }
+  }
+  @media (max-width:600px){
+    display: flex; 
+    justify-content: flex-end;
+  }
+  .search-form__item {
+    @media (max-width:600px){
+      box-shadow: 0 0 5px rgba(212, 209, 205, 0.3);
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: -100%;
+      z-index: 5;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease 0s;
+    }
+  }
+  .search-form__icon {
+    @media (min-width:600px){
+      display: none; 
     }
   }
 }
