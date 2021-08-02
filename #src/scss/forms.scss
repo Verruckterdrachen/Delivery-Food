@@ -367,15 +367,16 @@ textarea.input {
 
 //<QUANTITY>====================================================================================================
 .quantity {
-	width: 88px;
-	height: 40px;
+	width: 112px;
+	height: 32px;
 	display: flex;
-	border: 1px solid rgba(166, 166, 166, 0.45);
 	// .quantity__button
 	&__button {
-		flex: 0 0 30px;
+		flex: 0 0 40px;
 		position: relative;
 		cursor: pointer;
+    border: 1px solid $primaryColor;
+    border-radius: 2px;
 		&::before,
 		&::after {
 			content: "";
@@ -384,7 +385,7 @@ textarea.input {
 			left: 50%;
 			transition: all 0.3s ease 0s;
 			margin: 0px 0px 0px -4.5px;
-			background-color: #a6a6a6;
+			background-color: $primaryColor;
 			width: 9px;
 			height: 1px;
 		}
@@ -410,9 +411,11 @@ textarea.input {
 	&__input {
 		flex: 1 1 auto;
 		input {
+      font-family: "SF-Pro";
 			height: 100%;
-			color: #a6a6a6;
-			font-size: 12px;
+			color: $mainColor;
+			font-size: 16px;
+      line-height: 24 / 16 * 100%;
 			width: 100%;
 			text-align: center;
 		}

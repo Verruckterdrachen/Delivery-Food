@@ -154,15 +154,20 @@ body {
   margin: 0px 25px 0px 0px;
 }
 .price {
-  position: relative;
   margin: 0px 20px 0px 0px;
   &::after{
+    padding: 0px 0px 0px 5px;
+  }
+}
+.category {
+  position: relative;
+  &::before{
     content:'';
     position: absolute;
     width: 5px;
     height: 5px;
     top: 50%;
-    right: -12px;
+    left: -13px;
     background-color: $lightGrayColor;
     border-radius: 50%;
     transform: translate(0px,-50%);
